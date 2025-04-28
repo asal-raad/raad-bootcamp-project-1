@@ -1,0 +1,139 @@
+@import url(font.css);
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+html {
+  font-size: 62.5%;
+}
+:root {
+  --color-white: #fff;
+  --color-black: #000;
+  --color-primary: rgb(17, 75, 26);
+  --color-text: rgb(144, 164, 174);
+  --border-radius: 1rem;
+}
+body {
+  font-family: Vazirmatn;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  margin-top: 5rem;
+}
+h1 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  text-align: center;
+}
+.cards {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  justify-items: center;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 4rem;
+}
+.card__item {
+  width: 45rem;
+  height: auto;
+  padding: 3rem 4rem;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+/* header__card */
+.card__item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.header-right .card__number {
+  font-size: 1.8rem;
+  font-weight: bold;
+  background-color: rgb(184, 209, 177);
+  color: var(--color-primary);
+  padding: 0.5rem 1.5rem;
+  border-radius: var(--border-radius);
+  margin-right: -0.2rem;
+  text-align: center;
+}
+.header-right .card__upload {
+  font-size: 1.6rem;
+  color: var(--color-primary);
+  font-weight: 700;
+  margin-right: 0.5rem;
+}
+.header-left .card__date {
+  font-size: 1.4rem;
+}
+/* main__card */
+.card__item-main {
+  margin-bottom: 2rem;
+}
+.card__item-main h2 {
+  font-size: 1.8rem;
+  font-weight: 900;
+  margin-bottom: 0.5rem;
+}
+.card__item-main span {
+  font-size: 1.2rem;
+}
+/* footer__card */
+.card__item-footer {
+  display: flex;
+  justify-content: space-between;
+
+  align-items: center;
+}
+.footer-right {
+  display: flex;
+  align-items: center;
+}
+.footer-right img {
+  width: 4rem;
+  height: 4rem;
+  object-fit: cover;
+  border-radius: var(--border-radius);
+}
+.footer-right .card__fullname {
+  margin-right: 1rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.footer-left button {
+  outline: none;
+  border: none;
+  background-color: var(--color-primary);
+  font-size: 1.4rem;
+  cursor: pointer;
+  padding: 2rem 1.5rem;
+  border-radius: var(--border-radius);
+  color: var(--color-white);
+  font-family: Vazirmatn;
+}
+.footer-left button:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(45deg, #01461e 0%, #75a173 100%);
+}
+
+@media screen and (min-width: 678px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+  h1 {
+    text-align: start;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
